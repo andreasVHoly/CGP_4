@@ -1,0 +1,15 @@
+Print-ready Constructive Solid Geometry Model
+
+Use the CSG system you have developed over the preceding assignments to create a free-form sculpture by combining primitive shapes. You may use imported STL models as leaf nodes for your CSG tree, but do so sparingly. It may also be necessary to create more primitives (e.g., planes, cones, etc) to achieve your final design.
+
+You may not use any external programs, except to reduce the polygon count of your final model using mesh reduction (for example in Blender) and to add supports (using MeshMixer).
+
+Submission Format:
+
+- An STL model with supports that is suitable for 3D printing. The print budget for your model should be less than 10m.
+
+- In addition you should submit a PPT presentation showing the CSG Tree designed for you model and images of the final model from different orientations.
+
+Grading: the submitted model will be graded according to printability and aesthetics. This mark will count 10% towards your final grade, with a further 5% for the quality of the final printed version.
+
+You will need to showcase and discuss your submitted sculpture in the lecture on Thursday 17 March and Friday 18 March.
