@@ -40,7 +40,7 @@ GLWidget::GLWidget(const QGLFormat& format, QWidget *parent)
     updateGeometry = true;
     meshVisible = false;
 
-    scene.sampleScene();
+    scene.freddyScene();
 
     // lattice matches default scene
     def.setDim(3,3,3);

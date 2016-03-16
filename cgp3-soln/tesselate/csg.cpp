@@ -541,16 +541,16 @@ void Scene::freddyScene(){
 
     //palm
     ShapeNode * handSph_r = new ShapeNode();
-    handSph_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    handSph_r->shape = new Sphere(cgp::Point(1.2f, -0.7f, 1.0f), 1.5f);
     //finger1
     ShapeNode * handCyl1_r = new ShapeNode();
-    handCyl1_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    handCyl1_r->shape = new Cylinder(cgp::Point(1.4f, -0.8f, 2.5f), cgp::Point(3.1f, -0.4f, 1.9f), 0.25f);
     //finger1
     ShapeNode * handCyl2_r = new ShapeNode();
-    handCyl2_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    handCyl2_r->shape = new Cylinder(cgp::Point(1.0f, -1.2f, 2.5f), cgp::Point(2.7f, -0.8f, 1.9f), 0.25f);
     //finger1
     ShapeNode * handCyl3_r = new ShapeNode();
-    handCyl3_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    handCyl3_r->shape = new Cylinder(cgp::Point(0.8f, -1.6f, 2.5f), cgp::Point(2.5f, -1.2f, 1.9f), 0.25f);
 
 
     OpNode * hand_right_1 = new OpNode();
@@ -578,7 +578,8 @@ void Scene::freddyScene(){
 
 
 
-
+    ShapeNode * nose = new ShapeNode();
+    nose->shape = new Cylinder(cgp::Point(-10.0f, 0.0f, 0.0f), cgp::Point(-9.0f, 0.0f, 0.0f), 1.0f);
 
 
 
@@ -587,13 +588,13 @@ void Scene::freddyScene(){
 
     //main head
     ShapeNode * headSph1 = new ShapeNode();
-    headSph1->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    headSph1->shape = new Sphere(cgp::Point(0.0f, 0.6f, 0.0f), 3.3f);
     //eye2
     ShapeNode * eyeSph1 = new ShapeNode();
-    eyeSph1->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    eyeSph1->shape = new Sphere(cgp::Point(-1.2f, 1.3f, 3.1f), 0.3f);
     //eye1
     ShapeNode * eyeSph2 = new ShapeNode();
-    eyeSph2->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    eyeSph2->shape = new Sphere(cgp::Point(1.2f, 1.3f, 3.1f), 0.3f);
 
 
     OpNode * head_eyes = new OpNode();
@@ -605,7 +606,7 @@ void Scene::freddyScene(){
     OpNode * head = new OpNode();
     head->op = SetOp::DIFFERENCE;
     head->left = head_eyes;
-    head->right = eyeSph1;
+    head->right = eyeSph2;
 
 
 
@@ -617,14 +618,14 @@ void Scene::freddyScene(){
 
     //left fat bubble
     ShapeNode * bodySph1 = new ShapeNode();
-    bodySph1->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    bodySph1->shape = new Sphere(cgp::Point(-0.5f, 0.0f, 0.0f), 3.0f);
 
     //middle fat bubble
     ShapeNode * bodySph2 = new ShapeNode();
-    bodySph2->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    bodySph2->shape = new Sphere(cgp::Point(0.0f, 0.0f, 0.0f), 3.2f);
     //right fat bubble
     ShapeNode * bodySph3 = new ShapeNode();
-    bodySph3->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    bodySph3->shape = new Sphere(cgp::Point(0.5f, 0.0f, 0.0f), 3.0f);
 
 
 
@@ -647,10 +648,10 @@ void Scene::freddyScene(){
     //TAIL//
     //made up of a cylinder and sphere
     ShapeNode * tailSph = new ShapeNode();
-    tailSph->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    tailSph->shape = new Sphere(cgp::Point(0.0f, 0.0f, 0.0f), 0.5f);
 
     ShapeNode * tailCyl = new ShapeNode();
-    tailCyl->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    tailCyl->shape = new Cylinder(cgp::Point(3.0f, 0.0f, 0.0f), cgp::Point(3.8f, 0.0f,0.0f), 0.2f);
 
     OpNode * tail = new OpNode();
     tail->op = SetOp::UNION;
@@ -668,45 +669,57 @@ void Scene::freddyScene(){
 
 
     //leaf conncetions
-    OpNode * l2_1 = new OpNode();
-    l2_1->op = SetOp::UNION;
-    l2_1->left = head;
-    //l2_1->right = nose;
-    l2_1->right = NULL;
+    OpNode * head_nose = new OpNode();
+    head_nose->op = SetOp::UNION;
+    head_nose->left = head;
+    head_nose->right = nose;
+    //l2_1->right = NULL;
 
-    OpNode * l2_2 = new OpNode();
-    l2_2->op = SetOp::UNION;
-    l2_2->left = tail;
-    l2_2->right = body;
+    OpNode * tail_body = new OpNode();
+    tail_body->op = SetOp::UNION;
+    tail_body->left = tail;
+    tail_body->right = body;
 
-    OpNode * l2_3 = new OpNode();
-    l2_3->op = SetOp::UNION;
-    l2_3->left = foot_left;
-    l2_3->right = foot_right;
+    OpNode * feet = new OpNode();
+    feet->op = SetOp::UNION;
+    feet->left = foot_left;
+    feet->right = foot_right;
 
-    OpNode * l2_4 = new OpNode();
-    l2_4->op = SetOp::UNION;
-    l2_4->left = hand_left;
-    l2_4->right = hand_right;
+    OpNode * hands = new OpNode();
+    hands->op = SetOp::UNION;
+    hands->left = hand_left;
+    hands->right = hand_right;
 
-    OpNode * l1_1 = new OpNode();
-    l1_1->op = SetOp::UNION;
-    l1_1->left = l2_1;
-    l1_1->right = l2_2;
+    OpNode * bodies = new OpNode();
+    bodies->op = SetOp::UNION;
+    /*bodies->left = head_nose;
+    bodies->right = tail_body;*/
+    bodies->left = hand_right;
+    bodies->right = tail_body;
 
-    OpNode * l1_2 = new OpNode();
-    l1_2->op = SetOp::UNION;
-    l1_2->left = l2_3;
-    l1_2->right = l2_4;
+    OpNode * limbs = new OpNode();
+    limbs->op = SetOp::UNION;
+    limbs->left = feet;
+    limbs->right = hands;
 
     OpNode * top = new OpNode();
     top->op = SetOp::UNION;
-    top->left = l1_1;
-    top->right = l1_2;
+    top->left = bodies;
+    top->right = limbs;
 
 
+
+    ShapeNode * newNode = new ShapeNode();
+    newNode->shape = new Cylinder(cgp::Point(0.0f, -2.5f, 0.0f), cgp::Point(0.0f, 5.0f, 0.0f), 7.0f);
 
 
     //root
-    csgroot = top;
+    OpNode * cylcut = new OpNode();
+    cylcut->op = SetOp::INTERSECTION;
+    cylcut->left = bodies;
+    cylcut->right = newNode;
+
+
+
+    csgroot = cylcut;
 }
