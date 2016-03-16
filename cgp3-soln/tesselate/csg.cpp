@@ -505,32 +505,31 @@ void Scene::freddyScene(){
 
     //palm
     ShapeNode * handSph_l = new ShapeNode();
-    handSph_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    handSph_l->shape = new Sphere(cgp::Point(-1.8f, -0.7f, 1.0f), 1.5f);
     //finger1
-    ShapeNode * handCyl1_l = new ShapeNode();
-    handCyl1_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
     //finger1
     ShapeNode * handCyl2_l = new ShapeNode();
-    handCyl2_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    handCyl2_l->shape = new Cylinder(cgp::Point(-1.2f, -1.2f, 2.5f), cgp::Point(-2.7f, -0.8f, 1.9f), 0.25f);
     //finger1
     ShapeNode * handCyl3_l = new ShapeNode();
-    handCyl3_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    handCyl3_l->shape = new Cylinder(cgp::Point(-0.75f, -1.6f, 2.5f), cgp::Point(-2.5f, -1.2f, 1.9f), 0.25f);
 
 
     OpNode * hand_left_1 = new OpNode();
     hand_left_1->op = SetOp::UNION;
     hand_left_1->left = handSph_l;
-    hand_left_1->right = handCyl1_l;
+    hand_left_1->right = handCyl2_l;
 
-    OpNode * hand_left_2 = new OpNode();
+  /*  OpNode * hand_left_2 = new OpNode();
     hand_left_2->op = SetOp::UNION;
     hand_left_2->left = handCyl3_l;
-    hand_left_2->right = handCyl2_l;
+    hand_left_2->right = handCyl2_l;*/
 
     OpNode * hand_left = new OpNode();
     hand_left->op = SetOp::UNION;
     hand_left->left = hand_left_1;
-    hand_left->right = hand_left_2;
+    hand_left->right = handCyl3_l;
 
 
 
@@ -542,9 +541,7 @@ void Scene::freddyScene(){
     //palm
     ShapeNode * handSph_r = new ShapeNode();
     handSph_r->shape = new Sphere(cgp::Point(1.8f, -0.7f, 1.0f), 1.5f);
-    //finger1
-    ShapeNode * handCyl1_r = new ShapeNode();
-    handCyl1_r->shape = new Cylinder(cgp::Point(0.0f, -0.8f, 0.0f), cgp::Point(0.0f, -0.4f, 0.0f), 0.25f);
+
     //finger1
     ShapeNode * handCyl2_r = new ShapeNode();
     handCyl2_r->shape = new Cylinder(cgp::Point(1.2f, -1.2f, 2.5f), cgp::Point(2.7f, -0.8f, 1.9f), 0.25f);
@@ -556,17 +553,17 @@ void Scene::freddyScene(){
     OpNode * hand_right_1 = new OpNode();
     hand_right_1->op = SetOp::UNION;
     hand_right_1->left = handSph_r;
-    hand_right_1->right = handCyl1_r;
+    hand_right_1->right = handCyl2_r;
 
-    OpNode * hand_right_2 = new OpNode();
+    /*OpNode * hand_right_2 = new OpNode();
     hand_right_2->op = SetOp::UNION;
     hand_right_2->left = handCyl3_r;
-    hand_right_2->right = handCyl2_r;
+    hand_right_2->right = handCyl2_r;*/
 
     OpNode * hand_right = new OpNode();
     hand_right->op = SetOp::UNION;
     hand_right->left = hand_right_1;
-    hand_right->right = hand_right_2;
+    hand_right->right = handCyl3_r;
 
 
 
@@ -692,10 +689,10 @@ void Scene::freddyScene(){
 
     OpNode * bodies = new OpNode();
     bodies->op = SetOp::UNION;
-    /*bodies->left = head_nose;
-    bodies->right = tail_body;*/
-    bodies->left = hand_right;
+    bodies->left = head_nose;
     bodies->right = tail_body;
+    /*bodies->left = hands;
+    bodies->right = tail_body;*/
 
     OpNode * limbs = new OpNode();
     limbs->op = SetOp::UNION;
@@ -704,11 +701,13 @@ void Scene::freddyScene(){
 
     OpNode * top = new OpNode();
     top->op = SetOp::UNION;
+    /*top->left = bodies;
+    top->right = limbs;*/
     top->left = bodies;
-    top->right = limbs;
+    top->right = hands;
 
 
-
+    //bottom cutter
     ShapeNode * newNode = new ShapeNode();
     newNode->shape = new Cylinder(cgp::Point(0.0f, -2.5f, 0.0f), cgp::Point(0.0f, 5.0f, 0.0f), 7.0f);
 
@@ -716,7 +715,7 @@ void Scene::freddyScene(){
     //root
     OpNode * cylcut = new OpNode();
     cylcut->op = SetOp::INTERSECTION;
-    cylcut->left = bodies;
+    cylcut->left = top;
     cylcut->right = newNode;
 
 
