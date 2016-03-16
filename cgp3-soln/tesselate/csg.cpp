@@ -259,7 +259,7 @@ void Scene::voxSetOp(SetOp op, VoxelVolume *leftarg, VoxelVolume *rightarg)
             default:
                 break;
         }
-    } 
+    }
 }
 
 void Scene::voxWalk(SceneNode *root, VoxelVolume *voxels)
@@ -398,4 +398,315 @@ void Scene::expensiveScene()
     diff->right = mesh;
 
     csgroot = diff;
+}
+
+void Scene::freddyScene(){
+
+
+    //LEFT FOOT//
+    //3 speheres and 3 cylinders
+    ShapeNode * footSph1_l = new ShapeNode();
+    footSph1_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    ShapeNode * footSph2_l = new ShapeNode();
+    footSph2_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    ShapeNode * footSph3_l = new ShapeNode();
+    footSph3_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    ShapeNode * footCyl1_l = new ShapeNode();
+    footCyl1_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+    ShapeNode * footCyl2_l = new ShapeNode();
+    footCyl2_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+    ShapeNode * footCyl3_l = new ShapeNode();
+    footCyl3_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+
+    OpNode * foot_left_4 = new OpNode();
+    foot_left_4->op = SetOp::UNION;
+    foot_left_4->left = footSph3_l;
+    foot_left_4->right = footCyl3_l;
+
+    OpNode * foot_left_2 = new OpNode();
+    foot_left_2->op = SetOp::UNION;
+    foot_left_2->left = footSph1_l;
+    foot_left_2->right = footCyl1_l;
+
+    OpNode * foot_left_3 = new OpNode();
+    foot_left_3->op = SetOp::UNION;
+    foot_left_3->left = footSph2_l;
+    foot_left_3->right = footCyl2_l;
+
+    OpNode * foot_left_1 = new OpNode();
+    foot_left_1->op = SetOp::UNION;
+    foot_left_1->left = foot_left_3;
+    foot_left_1->right = foot_left_4;
+
+    OpNode * foot_left = new OpNode();
+    foot_left->op = SetOp::UNION;
+    foot_left->left = foot_left_1;
+    foot_left->right = foot_left_2;
+
+
+    //RIGHT FOOT//
+    //3 speheres and 3 cylinders
+    ShapeNode * footSph1_r = new ShapeNode();
+    footSph1_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    ShapeNode * footSph2_r = new ShapeNode();
+    footSph2_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    ShapeNode * footSph3_r = new ShapeNode();
+    footSph3_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    ShapeNode * footCyl1_r = new ShapeNode();
+    footCyl1_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+    ShapeNode * footCyl2_r = new ShapeNode();
+    footCyl2_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+    ShapeNode * footCyl3_r = new ShapeNode();
+    footCyl3_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+
+    OpNode * foot_right_4 = new OpNode();
+    foot_right_4->op = SetOp::UNION;
+    foot_right_4->left = footSph3_r;
+    foot_right_4->right = footCyl3_r;
+
+    OpNode * foot_right_3 = new OpNode();
+    foot_right_3->op = SetOp::UNION;
+    foot_right_3->left = footSph2_r;
+    foot_right_3->right = footCyl2_r;
+
+    OpNode * foot_right_2 = new OpNode();
+    foot_right_2->op = SetOp::UNION;
+    foot_right_2->left = footSph1_r;
+    foot_right_2->right = footCyl1_r;
+
+
+
+    OpNode * foot_right_1 = new OpNode();
+    foot_right_1->op = SetOp::UNION;
+    foot_right_1->left = foot_right_3;
+    foot_right_1->right = foot_right_4;
+
+
+    OpNode * foot_right = new OpNode();
+    foot_right->op = SetOp::UNION;
+    foot_right->left = foot_right_1;
+    foot_right->right = foot_right_2;
+
+
+    //LEFT HAND//
+    //made up of a spheres and 3 cylinders
+
+    //palm
+    ShapeNode * handSph_l = new ShapeNode();
+    handSph_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    //finger1
+    ShapeNode * handCyl1_l = new ShapeNode();
+    handCyl1_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    //finger1
+    ShapeNode * handCyl2_l = new ShapeNode();
+    handCyl2_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    //finger1
+    ShapeNode * handCyl3_l = new ShapeNode();
+    handCyl3_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+
+    OpNode * hand_left_1 = new OpNode();
+    hand_left_1->op = SetOp::UNION;
+    hand_left_1->left = handSph_l;
+    hand_left_1->right = handCyl1_l;
+
+    OpNode * hand_left_2 = new OpNode();
+    hand_left_2->op = SetOp::UNION;
+    hand_left_2->left = handCyl3_l;
+    hand_left_2->right = handCyl2_l;
+
+    OpNode * hand_left = new OpNode();
+    hand_left->op = SetOp::UNION;
+    hand_left->left = hand_left_1;
+    hand_left->right = hand_left_2;
+
+
+
+
+
+    //RIGHT HAND//
+    //made up of a spheres and 3 cylinders
+
+    //palm
+    ShapeNode * handSph_r = new ShapeNode();
+    handSph_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    //finger1
+    ShapeNode * handCyl1_r = new ShapeNode();
+    handCyl1_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    //finger1
+    ShapeNode * handCyl2_r = new ShapeNode();
+    handCyl2_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    //finger1
+    ShapeNode * handCyl3_r = new ShapeNode();
+    handCyl3_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+
+    OpNode * hand_right_1 = new OpNode();
+    hand_right_1->op = SetOp::UNION;
+    hand_right_1->left = handSph_r;
+    hand_right_1->right = handCyl1_r;
+
+    OpNode * hand_right_2 = new OpNode();
+    hand_right_2->op = SetOp::UNION;
+    hand_right_2->left = handCyl3_r;
+    hand_right_2->right = handCyl2_r;
+
+    OpNode * hand_right = new OpNode();
+    hand_right->op = SetOp::UNION;
+    hand_right->left = hand_right_1;
+    hand_right->right = hand_right_2;
+
+
+
+
+
+
+    //NOSE//
+    //made up of a cone and a star
+
+
+
+
+
+
+
+    //HEAD//
+    //made up of 3 spheres
+
+    //main head
+    ShapeNode * headSph1 = new ShapeNode();
+    headSph1->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    //eye2
+    ShapeNode * eyeSph1 = new ShapeNode();
+    eyeSph1->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    //eye1
+    ShapeNode * eyeSph2 = new ShapeNode();
+    eyeSph2->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+
+    OpNode * head_eyes = new OpNode();
+    head_eyes->op = SetOp::DIFFERENCE;
+    head_eyes->left = headSph1;
+    head_eyes->right = eyeSph1;
+
+
+    OpNode * head = new OpNode();
+    head->op = SetOp::DIFFERENCE;
+    head->left = head_eyes;
+    head->right = eyeSph1;
+
+
+
+
+
+
+    //BODY//
+    //made up of 3 spheres
+
+    //left fat bubble
+    ShapeNode * bodySph1 = new ShapeNode();
+    bodySph1->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    //middle fat bubble
+    ShapeNode * bodySph2 = new ShapeNode();
+    bodySph2->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    //right fat bubble
+    ShapeNode * bodySph3 = new ShapeNode();
+    bodySph3->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+
+
+    OpNode * body_lower = new OpNode();
+    body_lower->op = SetOp::UNION;
+    body_lower->left = bodySph2;
+    body_lower->right = bodySph3;
+
+
+    OpNode * body = new OpNode();
+    body->op = SetOp::UNION;
+    body->left = body_lower;
+    body->right = bodySph1;
+
+
+
+
+
+
+    //TAIL//
+    //made up of a cylinder and sphere
+    ShapeNode * tailSph = new ShapeNode();
+    tailSph->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+
+    ShapeNode * tailCyl = new ShapeNode();
+    tailCyl->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+
+    OpNode * tail = new OpNode();
+    tail->op = SetOp::UNION;
+    tail->left = tailCyl;
+    tail->right = tailSph;
+
+
+/*
+    ShapeNode * mesh = new ShapeNode();
+    Mesh * bunny = new Mesh();
+    bunny->readSTL("../meshes/bunny.stl");
+    bunny->boxFit(10.0f);
+    mesh->shape = bunny;*/
+
+
+
+    //leaf conncetions
+    OpNode * l2_1 = new OpNode();
+    l2_1->op = SetOp::UNION;
+    l2_1->left = head;
+    //l2_1->right = nose;
+    l2_1->right = NULL;
+
+    OpNode * l2_2 = new OpNode();
+    l2_2->op = SetOp::UNION;
+    l2_2->left = tail;
+    l2_2->right = body;
+
+    OpNode * l2_3 = new OpNode();
+    l2_3->op = SetOp::UNION;
+    l2_3->left = foot_left;
+    l2_3->right = foot_right;
+
+    OpNode * l2_4 = new OpNode();
+    l2_4->op = SetOp::UNION;
+    l2_4->left = hand_left;
+    l2_4->right = hand_right;
+
+    OpNode * l1_1 = new OpNode();
+    l1_1->op = SetOp::UNION;
+    l1_1->left = l2_1;
+    l1_1->right = l2_2;
+
+    OpNode * l1_2 = new OpNode();
+    l1_2->op = SetOp::UNION;
+    l1_2->left = l2_3;
+    l1_2->right = l2_4;
+
+    OpNode * top = new OpNode();
+    top->op = SetOp::UNION;
+    top->left = l1_1;
+    top->right = l1_2;
+
+
+
+
+    //root
+    csgroot = top;
 }

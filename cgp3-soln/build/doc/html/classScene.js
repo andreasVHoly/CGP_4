@@ -6,6 +6,7 @@ var classScene =
     [ "clear", "classScene.html#a70e5b1218abb729d70d9f41b107017f9", null ],
     [ "deform", "classScene.html#af50581fdbdd500a13a00e84760a605d2", null ],
     [ "expensiveScene", "classScene.html#a7f6354e31399f2c40aea4d6f87283517", null ],
+    [ "freddyScene", "classScene.html#ab8f47560551e2a84e6a82b84f9bbe1d7", null ],
     [ "genVizRender", "classScene.html#a2683f694189bb3f94f2558298d8f8886", null ],
     [ "genVoxRender", "classScene.html#a9d8e50c7a58bca8a447c3591ba2dc061", null ],
     [ "getMesh", "classScene.html#aeadefe3144d20cf8a7db0c6375038312", null ],

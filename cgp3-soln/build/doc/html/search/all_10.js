@@ -2,7 +2,7 @@ var searchData=
 [
   ['r',['r',['../classSphere.html#a2b1b412591a00eb30cb012e444f7192d',1,'Sphere::r()'],['../classCylinder.html#ab90935b882273295008a5bb7711f3e60',1,'Cylinder::r()']]],
   ['readstl',['readSTL',['../classMesh.html#a9071b587ca3e72e0e98a71bc321872ed',1,'Mesh']]],
-  ['renderer',['Renderer',['../classRenderer.html',1,'Renderer'],['../classGLWidget.html#a8ad153e0427a4dab6c0c2fd6f6b5d737',1,'GLWidget::renderer()'],['../classRenderer.html#ab559c701fc50172dd96942e5b44c9172',1,'Renderer::Renderer()']]],
+  ['renderer',['Renderer',['../classRenderer.html',1,'Renderer'],['../classRenderer.html#ab559c701fc50172dd96942e5b44c9172',1,'Renderer::Renderer()'],['../classGLWidget.html#a8ad153e0427a4dab6c0c2fd6f6b5d737',1,'GLWidget::renderer()']]],
   ['rep',['rep',['../classScene.html#a014b6a8f4fab94446b595622a7629239',1,'Scene']]],
   ['repaintallgl',['repaintAllGL',['../classWindow.html#a2adbda7b0ac88eb87994a276a2c053b0',1,'Window']]],
   ['reporttimes',['reportTimes',['../namespacestats.html#a02dcffbcb132403022f9ca4f221370e2',1,'stats']]],
