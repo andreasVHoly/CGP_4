@@ -1,7 +1,5 @@
 var classTestVoxels =
 [
-    [ "CPPUNIT_TEST", "classTestVoxels.html#a6014eacdd3ede03fc663adb59089a589", null ],
-    [ "CPPUNIT_TEST", "classTestVoxels.html#a1e360c2bb9241d0c6a0267e6f70428cb", null ],
     [ "CPPUNIT_TEST_SUITE", "classTestVoxels.html#ac10ee941a2b1882cdc5e867e9abc50d1", null ],
     [ "CPPUNIT_TEST_SUITE_END", "classTestVoxels.html#ada0f9e5d31df55f248e75cffda3c97d6", null ],
     [ "setUp", "classTestVoxels.html#af97c55e7cdae736a4ae3fbebf74cc41d", null ],

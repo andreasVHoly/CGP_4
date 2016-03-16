@@ -1,10 +1,10 @@
-FILE(REMOVE_RECURSE
-  "tess_automoc.cpp"
+file(REMOVE_RECURSE
   "tessviewer_automoc.cpp"
+  "tess_automoc.cpp"
   "CMakeFiles/tess_automoc"
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang)
-  INCLUDE(CMakeFiles/tess_automoc.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang)
+  include(CMakeFiles/tess_automoc.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

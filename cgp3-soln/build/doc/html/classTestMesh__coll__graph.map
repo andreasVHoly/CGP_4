@@ -1,6 +1,6 @@
 <map id="TestMesh" name="TestMesh">
-<area shape="rect" id="node3" href="$classMesh.html" title="A triangle mesh in 3D space. " alt="" coords="149,96,203,123"/>
-<area shape="rect" id="node4" href="$classBaseShape.html" title="Abstract base class for shapes. " alt="" coords="5,5,93,32"/>
-<area shape="rect" id="node5" href="$classShapeGeometry.html" title="Geometry in a format suitable for OpenGL. " alt="" coords="118,5,233,32"/>
-<area shape="rect" id="node6" href="$classcgp_1_1Vector.html" title="cgp::Vector" alt="" coords="258,5,347,32"/>
+<area shape="rect" id="node3" href="$classMesh.html" title="A triangle mesh in 3D space. " alt="" coords="149,95,204,121"/>
+<area shape="rect" id="node4" href="$classBaseShape.html" title="Abstract base class for shapes. " alt="" coords="5,5,95,32"/>
+<area shape="rect" id="node5" href="$classShapeGeometry.html" title="Geometry in a format suitable for OpenGL. " alt="" coords="119,5,235,32"/>
+<area shape="rect" id="node6" href="$classcgp_1_1Vector.html" title="cgp::Vector" alt="" coords="259,5,348,32"/>
 </map>

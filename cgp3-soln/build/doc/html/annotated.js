@@ -1,9 +1,9 @@
 var annotated =
 [
     [ "cgp", null, [
+      [ "BoundBox", "classcgp_1_1BoundBox.html", "classcgp_1_1BoundBox" ],
       [ "Point", "classcgp_1_1Point.html", "classcgp_1_1Point" ],
-      [ "Vector", "classcgp_1_1Vector.html", "classcgp_1_1Vector" ],
-      [ "BoundBox", "classcgp_1_1BoundBox.html", "classcgp_1_1BoundBox" ]
+      [ "Vector", "classcgp_1_1Vector.html", "classcgp_1_1Vector" ]
     ] ],
     [ "CppUnit", null, [
       [ "assertion_traits< std::array< T, N > >", "classCppUnit_1_1assertion__traits_3_01std_1_1array_3_01T_00_01N_01_4_01_4.html", "classCppUnit_1_1assertion__traits_3_01std_1_1array_3_01T_00_01N_01_4_01_4" ],

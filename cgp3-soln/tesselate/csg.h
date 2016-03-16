@@ -171,8 +171,7 @@ public:
      * create a sample csg tree to test different shapes and operators. Expensive because it uses mesh point containment with the Bunny.
      */
     void expensiveScene();
-
-    void freddyScene();
+	   void freddyScene();
 };
 
 #endif

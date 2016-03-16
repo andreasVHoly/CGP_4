@@ -10,8 +10,8 @@
 class TestVoxels : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(TestVoxels);
-    CPPUNIT_TEST(testVoxelSet);
-    CPPUNIT_TEST(testVoxelRegistration);
+    //CPPUNIT_TEST(testVoxelSet);
+    //CPPUNIT_TEST(testVoxelRegistration);
     CPPUNIT_TEST_SUITE_END();
 
 private:
@@ -25,7 +25,7 @@ public:
     /// Tidying up after unit tests
     void tearDown();
 
-    /** 
+    /**
      * Run simple set and get validity tests on voxels
      */
     void testVoxelSet();

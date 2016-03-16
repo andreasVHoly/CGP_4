@@ -9,9 +9,9 @@
 class TestFFD : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(TestFFD);
-    CPPUNIT_TEST(testCorners);
-    CPPUNIT_TEST(testCenter);
-    CPPUNIT_TEST(testIdentity);
+    //CPPUNIT_TEST(testCorners);
+    //CPPUNIT_TEST(testCenter);
+    //CPPUNIT_TEST(testIdentity);
     CPPUNIT_TEST_SUITE_END();
 
 private:
@@ -25,7 +25,7 @@ public:
     /// Tidying up after unit tests
     void tearDown();
 
-    /** 
+    /**
      * Test that vertices at the corners of an FFD lattice track the control points
      */
     void testCorners();

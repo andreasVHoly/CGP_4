@@ -16,7 +16,9 @@
 
 using namespace std;
 
-const int sphperdim = 20;
+const int sphperdim = 5;
+const bool sphereaccel = false; // controls whether or not the bounding sphere acceleration structure is used.
+                                // better set as <false> for any mesh with fewer than a hundred triangles.
 
 /**
  * A triangle in 3D space, with 3 indices into a vertex list and an outward facing normal. Triangle winding is counterclockwise.

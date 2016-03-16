@@ -1,6 +1,6 @@
-FILE(REMOVE_RECURSE
-  "tess_automoc.cpp"
+file(REMOVE_RECURSE
   "tessviewer_automoc.cpp"
+  "tess_automoc.cpp"
   "CMakeFiles/tessviewer.dir/main.cpp.o"
   "CMakeFiles/tessviewer.dir/tessviewer_automoc.cpp.o"
   "tessviewer.pdb"
@@ -8,6 +8,6 @@ FILE(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/tessviewer.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang CXX)
+  include(CMakeFiles/tessviewer.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

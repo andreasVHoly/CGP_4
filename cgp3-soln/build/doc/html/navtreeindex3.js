@@ -1,15 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"vecpnt_8h.html#ad8868ad62faaa8b94c21ddef207542c0":[3,0,1,9,7],
-"vecpnt_8h.html#adef3e2bf1953b685d311ccee1b281872":[3,0,1,9,9],
-"vecpnt_8h_source.html":[3,0,1,9],
-"view_8h.html":[3,0,1,10],
-"view_8h.html#a032124d6654ee353635defdec5348208":[3,0,1,10,1],
-"view_8h.html#a656a0c6dd88b9c342b605bd37f3f0f03":[3,0,1,10,5],
-"view_8h.html#a6ef6babb6c7fda627b9b9371822ea835":[3,0,1,10,8],
-"view_8h.html#a7f288f030060bf94823e245d3fd4febc":[3,0,1,10,9],
-"view_8h.html#aa055c0f2d81cb3bff317989e39238e72":[3,0,1,10,6],
-"view_8h.html#ac5a945020d3528355cda82d383676736":[3,0,1,10,3],
 "view_8h.html#ae95d947783f5c827816f3309cd13c624":[3,0,1,10,7],
 "view_8h.html#ae95d947783f5c827816f3309cd13c624a2c30f7f720a02eae3fe9d4008baf565f":[3,0,1,10,7,2],
 "view_8h.html#ae95d947783f5c827816f3309cd13c624a384d2f7811fb2dbe3610d8ada2693927":[3,0,1,10,7,0],

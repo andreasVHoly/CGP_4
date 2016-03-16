@@ -1,6 +1,6 @@
 <map id="TestFFD" name="TestFFD">
-<area shape="rect" id="node3" href="$classffd.html" title="Free&#45;Form Deformation of geometric models. " alt="" coords="174,109,212,136"/>
-<area shape="rect" id="node4" href="$classShapeGeometry.html" title="Geometry in a format suitable for OpenGL. " alt="" coords="9,5,124,32"/>
-<area shape="rect" id="node5" href="$classcgp_1_1Vector.html" title="cgp::Vector" alt="" coords="149,5,237,32"/>
+<area shape="rect" id="node3" href="$classffd.html" title="Free&#45;Form Deformation of geometric models. " alt="" coords="174,109,213,136"/>
+<area shape="rect" id="node4" href="$classShapeGeometry.html" title="Geometry in a format suitable for OpenGL. " alt="" coords="9,5,125,32"/>
+<area shape="rect" id="node5" href="$classcgp_1_1Vector.html" title="cgp::Vector" alt="" coords="149,5,238,32"/>
 <area shape="rect" id="node6" href="$classcgp_1_1Point.html" title="cgp::Point" alt="" coords="262,5,343,32"/>
 </map>

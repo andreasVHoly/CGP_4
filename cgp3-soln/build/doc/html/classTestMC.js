@@ -1,6 +1,5 @@
 var classTestMC =
 [
-    [ "CPPUNIT_TEST", "classTestMC.html#a523b56b3639bf3718569c7f9c40d6579", null ],
     [ "CPPUNIT_TEST_SUITE", "classTestMC.html#a20087e5589da30e18386c5b0e9fefea5", null ],
     [ "CPPUNIT_TEST_SUITE_END", "classTestMC.html#a74850c54b3575a15f6530b1f2315c74d", null ],
     [ "setUp", "classTestMC.html#adc32501115995f4dd4e25b96b82aec82", null ],

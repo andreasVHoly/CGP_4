@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'window.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.2.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.4.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'window.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.2.1. It"
+#error "This file was generated using the moc from 5.4.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,37 +20,38 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Window_t {
     QByteArrayData data[16];
-    char stringdata[153];
+    char stringdata[152];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_Window_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_Window_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_Window_t qt_meta_stringdata_Window = {
     {
-QT_MOC_LITERAL(0, 0, 6),
-QT_MOC_LITERAL(1, 7, 12),
-QT_MOC_LITERAL(2, 20, 0),
-QT_MOC_LITERAL(3, 21, 8),
-QT_MOC_LITERAL(4, 30, 6),
-QT_MOC_LITERAL(5, 37, 9),
-QT_MOC_LITERAL(6, 47, 4),
-QT_MOC_LITERAL(7, 52, 7),
-QT_MOC_LITERAL(8, 60, 16),
-QT_MOC_LITERAL(9, 77, 14),
-QT_MOC_LITERAL(10, 92, 12),
-QT_MOC_LITERAL(11, 105, 5),
-QT_MOC_LITERAL(12, 111, 8),
-QT_MOC_LITERAL(13, 120, 10),
-QT_MOC_LITERAL(14, 131, 11),
-QT_MOC_LITERAL(15, 143, 8)
+QT_MOC_LITERAL(0, 0, 6), // "Window"
+QT_MOC_LITERAL(1, 7, 12), // "repaintAllGL"
+QT_MOC_LITERAL(2, 20, 0), // ""
+QT_MOC_LITERAL(3, 21, 8), // "saveFile"
+QT_MOC_LITERAL(4, 30, 6), // "saveAs"
+QT_MOC_LITERAL(5, 37, 9), // "showModel"
+QT_MOC_LITERAL(6, 47, 4), // "show"
+QT_MOC_LITERAL(7, 52, 7), // "showLat"
+QT_MOC_LITERAL(8, 60, 16), // "showParamOptions"
+QT_MOC_LITERAL(9, 77, 14), // "lineEditChange"
+QT_MOC_LITERAL(10, 92, 12), // "sliderChange"
+QT_MOC_LITERAL(11, 105, 5), // "value"
+QT_MOC_LITERAL(12, 111, 8), // "voxPress"
+QT_MOC_LITERAL(13, 120, 10), // "marchPress"
+QT_MOC_LITERAL(14, 131, 11), // "smoothPress"
+QT_MOC_LITERAL(15, 143, 8) // "defPress"
+
     },
     "Window\0repaintAllGL\0\0saveFile\0saveAs\0"
     "showModel\0show\0showLat\0showParamOptions\0"
     "lineEditChange\0sliderChange\0value\0"
     "voxPress\0marchPress\0smoothPress\0"
-    "defPress\0"
+    "defPress"
 };
 #undef QT_MOC_LITERAL
 
@@ -68,18 +69,18 @@ static const uint qt_meta_data_Window[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   74,    2, 0x0a,
-       3,    0,   75,    2, 0x0a,
-       4,    0,   76,    2, 0x0a,
-       5,    1,   77,    2, 0x0a,
-       7,    1,   80,    2, 0x0a,
-       8,    0,   83,    2, 0x0a,
-       9,    0,   84,    2, 0x0a,
-      10,    1,   85,    2, 0x0a,
-      12,    0,   88,    2, 0x0a,
-      13,    0,   89,    2, 0x0a,
-      14,    0,   90,    2, 0x0a,
-      15,    0,   91,    2, 0x0a,
+       1,    0,   74,    2, 0x0a /* Public */,
+       3,    0,   75,    2, 0x0a /* Public */,
+       4,    0,   76,    2, 0x0a /* Public */,
+       5,    1,   77,    2, 0x0a /* Public */,
+       7,    1,   80,    2, 0x0a /* Public */,
+       8,    0,   83,    2, 0x0a /* Public */,
+       9,    0,   84,    2, 0x0a /* Public */,
+      10,    1,   85,    2, 0x0a /* Public */,
+      12,    0,   88,    2, 0x0a /* Public */,
+      13,    0,   89,    2, 0x0a /* Public */,
+      14,    0,   90,    2, 0x0a /* Public */,
+      15,    0,   91,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -122,7 +123,7 @@ void Window::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
 
 const QMetaObject Window::staticMetaObject = {
     { &QMainWindow::staticMetaObject, qt_meta_stringdata_Window.data,
-      qt_meta_data_Window,  qt_static_metacall, 0, 0}
+      qt_meta_data_Window,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
@@ -133,7 +134,7 @@ const QMetaObject *Window::metaObject() const
 
 void *Window::qt_metacast(const char *_clname)
 {
-    if (!_clname) return 0;
+    if (!_clname) return Q_NULLPTR;
     if (!strcmp(_clname, qt_meta_stringdata_Window.stringdata))
         return static_cast<void*>(const_cast< Window*>(this));
     return QMainWindow::qt_metacast(_clname);

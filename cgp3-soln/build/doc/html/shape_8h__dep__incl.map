@@ -1,12 +1,12 @@
 <map id="tesselate/shape.h" name="tesselate/shape.h">
-<area shape="rect" id="node2" href="$renderer_8h_source.html" title="tesselate/renderer.h" alt="" coords="35,80,172,107"/>
+<area shape="rect" id="node2" href="$renderer_8h_source.html" title="tesselate/renderer.h" alt="" coords="35,80,173,107"/>
 <area shape="rect" id="node3" href="$mesh_8h.html" title="Data structure representing a triangle mesh in 3D space. " alt="" coords="67,229,189,256"/>
 <area shape="rect" id="node5" href="$glwidget_8h_source.html" title="tesselate/glwidget.h" alt="" coords="5,379,144,405"/>
 <area shape="rect" id="node10" href="$ffd_8h.html" title="Free&#45;form Deformation to warp vertices of a mesh. " alt="" coords="142,155,247,181"/>
-<area shape="rect" id="node4" href="$csg_8h.html" title="Constructive Solid Geometry binary tree, with internal nodes representing binary set operations and l..." alt="" coords="211,304,321,331"/>
+<area shape="rect" id="node4" href="$csg_8h.html" title="Constructive Solid Geometry binary tree, with internal nodes representing binary set operations and l..." alt="" coords="211,304,322,331"/>
 <area shape="rect" id="node9" href="$test__mesh_8h_source.html" title="test/test_mesh.h" alt="" coords="67,304,187,331"/>
 <area shape="rect" id="node7" href="$test__csg_8h_source.html" title="test/test_csg.h" alt="" coords="321,379,431,405"/>
 <area shape="rect" id="node8" href="$test__mc_8h_source.html" title="test/test_mc.h" alt="" coords="191,379,297,405"/>
-<area shape="rect" id="node6" href="$window_8h_source.html" title="tesselate/window.h" alt="" coords="7,453,141,480"/>
-<area shape="rect" id="node11" href="$test__ffd_8h_source.html" title="test/test_ffd.h" alt="" coords="214,229,316,256"/>
+<area shape="rect" id="node6" href="$window_8h_source.html" title="tesselate/window.h" alt="" coords="7,453,142,480"/>
+<area shape="rect" id="node11" href="$test__ffd_8h_source.html" title="test/test_ffd.h" alt="" coords="214,229,317,256"/>
 </map>

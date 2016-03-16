@@ -1,8 +1,5 @@
 var classTestFFD =
 [
-    [ "CPPUNIT_TEST", "classTestFFD.html#adf923d22e0b3a0ad8952827854373e1b", null ],
-    [ "CPPUNIT_TEST", "classTestFFD.html#a6d3816ef6e5e5c56137302e0275078a3", null ],
-    [ "CPPUNIT_TEST", "classTestFFD.html#a984e4ebb6ee4709238171d2813d70856", null ],
     [ "CPPUNIT_TEST_SUITE", "classTestFFD.html#a54875e2e397af64f29963dd3d2646910", null ],
     [ "CPPUNIT_TEST_SUITE_END", "classTestFFD.html#a871814c707c47090fa6a023c4b4c4167", null ],
     [ "setUp", "classTestFFD.html#a59da840616be062f9a71aa158f2b95f9", null ],

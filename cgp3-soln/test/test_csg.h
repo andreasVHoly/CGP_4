@@ -10,7 +10,7 @@
 class TestCSG : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(TestCSG);
-    CPPUNIT_TEST(testSimpleCSG);
+    //CPPUNIT_TEST(testSimpleCSG);
     CPPUNIT_TEST_SUITE_END();
 
 private:
@@ -24,7 +24,7 @@ public:
     /// Tidying up after unit tests
     void tearDown();
 
-    /** 
+    /**
      * Run simple set and get validity tests on voxels
      */
     void testSimpleCSG();

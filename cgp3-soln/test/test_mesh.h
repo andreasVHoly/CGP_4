@@ -10,7 +10,7 @@
 class TestMesh : public CppUnit::TestFixture
 {
     CPPUNIT_TEST_SUITE(TestMesh);
-    CPPUNIT_TEST(testMeshing);
+    //CPPUNIT_TEST(testMeshing);
     CPPUNIT_TEST_SUITE_END();
 
 private:
@@ -24,11 +24,11 @@ public:
     /// Tidying up after unit tests
     void tearDown();
 
-    /** 
+    /**
      * Run standard validity tests on bunny mesh
      * @pre bunny.stl must be located in the project root directory
      */
-    void testMeshing();
+
 };
 
 #endif /* !TILER_TEST_MESH_H */

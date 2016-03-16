@@ -288,13 +288,15 @@ void Scene::voxWalk(SceneNode *root, VoxelVolume *voxels)
         shapenode = dynamic_cast<ShapeNode*>( root );
         // needs to be improved by only considering bounding box area
         voxels->getDim(dx, dy, dz);
+
+        cerr << "xdim = " << dx << endl;
         for(int x = 0; x < dx; x++)
         {
-            // cerr << "slice x = " << x << endl;
             #pragma omp parallel for
             for(int y = 0; y < dy; y++)
                 for(int z = 0; z < dz; z++)
                     voxels->set(x,y,z, shapenode->shape->pointContainment(voxels->getVoxelPos(x,y,z)));
+            // /cerr << "point containment slice x = " << x << endl;
         }
     }
     else // OpNode
@@ -383,7 +385,7 @@ void Scene::expensiveScene()
 
     ShapeNode * mesh = new ShapeNode();
     Mesh * bunny = new Mesh();
-    bunny->readSTL("../meshes/bunny.stl");
+    bunny->readSTL("../meshes/cube.stl");
     bunny->boxFit(10.0f);
     mesh->shape = bunny;
 
@@ -392,13 +394,11 @@ void Scene::expensiveScene()
     combine->left = mesh;
     combine->right = cyl;
 
-    OpNode * diff = new OpNode();
-    diff->op = SetOp::DIFFERENCE;
-    diff->left = combine;
-    diff->right = mesh;
-
-    csgroot = diff;
+    csgroot = combine;
 }
+
+
+
 
 void Scene::freddyScene(){
 

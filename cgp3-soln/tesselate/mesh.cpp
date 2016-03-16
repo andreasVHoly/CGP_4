@@ -297,7 +297,7 @@ int triangleTable[256][16] =
 //==========END BLOYD
 
 GLfloat stdCol[] = {0.7f, 0.7f, 0.75f, 0.4f};
-const int raysamples = 2;
+const int raysamples = 1;
 
 void Sphere::genGeometry(ShapeGeometry * geom, View * view)
 {
@@ -795,8 +795,11 @@ bool Mesh::pointContainment(cgp::Point pnt)
     // construct transformation matrix
     buildTransform(tfm);
 
-    if(boundspheres.empty()) // no acceleration structure so build
-        buildSphereAccel((int) sphperdim);
+    if(sphereaccel)
+    {
+        if(boundspheres.empty()) // no acceleration structure so build
+            buildSphereAccel((int) sphperdim);
+    }
 
     for(i = 0; i < raysamples; i++)
     {
@@ -809,34 +812,51 @@ bool Mesh::pointContainment(cgp::Point pnt)
         dir.normalize();
         ray = glm::vec3(dir.i, dir.j, dir.k);
 
-        // gather potential triangle intersector indices and remove duplicates
-        for(s = 0; s < (int) boundspheres.size(); s++)
+        if(sphereaccel)
         {
-            // sphere accel structure is in model space, so need to apply transform
-            cxfm = tfm * glm::vec4(boundspheres[s].c.x, boundspheres[s].c.y, boundspheres[s].c.z, 1.0f);
-            sphc = cgp::Point(cxfm.x, cxfm.y, cxfm.z);
-
-            rayPointDist(pnt, dir, sphc, tval, dist);
-            if(dist <= boundspheres[s].r) // if ray hits the bounding sphere
-                for(t = 0; t < (int) boundspheres[s].ind.size(); t++) // include all triangles allocated to the bounding sphere
-                    inspheres.push_back(boundspheres[s].ind[t]);
-        }
-
-        // remove duplicate triangle indices because a triangle may appear in multiple bounding spheres
-        inspheres.sort();
-        inspheres.unique();
-
-        // test intersection against list of triangles
-        for (list<int>::iterator it=inspheres.begin(); it!=inspheres.end(); ++it)
-        {
-            for(p = 0; p < 3; p++)
+            // gather potential triangle intersector indices and remove duplicates
+            for(s = 0; s < (int) boundspheres.size(); s++)
             {
-                vert = verts[tris[(* it)].v[p]];
-                vxfm = tfm * glm::vec4(vert.x, vert.y, vert.z, 1.0f);
-                v[p] = glm::vec3(vxfm.x, vxfm.y, vxfm.z);
+                // sphere accel structure is in model space, so need to apply transform
+                cxfm = tfm * glm::vec4(boundspheres[s].c.x, boundspheres[s].c.y, boundspheres[s].c.z, 1.0f);
+                sphc = cgp::Point(cxfm.x, cxfm.y, cxfm.z);
+
+                rayPointDist(pnt, dir, sphc, tval, dist);
+                if(dist <= boundspheres[s].r) // if ray hits the bounding sphere
+                    for(t = 0; t < (int) boundspheres[s].ind.size(); t++) // include all triangles allocated to the bounding sphere
+                        inspheres.push_back(boundspheres[s].ind[t]);
             }
-            if(glm::intersectRayTriangle(origin, ray, v[0], v[1], v[2], xsect) || glm::intersectRayTriangle(origin, ray, v[0], v[2], v[1], xsect)) // test triangle in both windings because intersectLineTriangle is winding dependent
-                hits++;
+
+            // remove duplicate triangle indices because a triangle may appear in multiple bounding spheres
+            inspheres.sort();
+            inspheres.unique();
+
+            // test intersection against list of triangles
+            for (list<int>::iterator it=inspheres.begin(); it!=inspheres.end(); ++it)
+            {
+                for(p = 0; p < 3; p++)
+                {
+                    vert = verts[tris[(* it)].v[p]];
+                    vxfm = tfm * glm::vec4(vert.x, vert.y, vert.z, 1.0f);
+                    v[p] = glm::vec3(vxfm.x, vxfm.y, vxfm.z);
+                }
+                if(glm::intersectRayTriangle(origin, ray, v[0], v[1], v[2], xsect) || glm::intersectRayTriangle(origin, ray, v[0], v[2], v[1], xsect)) // test triangle in both windings because intersectLineTriangle is winding dependent
+                    hits++;
+            }
+        }
+        else // no acceleration structure so test against all triangles
+        {
+            for(t = 0; t < (int) tris.size(); t++)
+            {
+                for(p = 0; p < 3; p++)
+                {
+                    vert = verts[tris[t].v[p]];
+                    vxfm = tfm * glm::vec4(vert.x, vert.y, vert.z, 1.0f);
+                    v[p] = glm::vec3(vxfm.x, vxfm.y, vxfm.z);
+                }
+                if(glm::intersectRayTriangle(origin, ray, v[0], v[1], v[2], xsect) || glm::intersectRayTriangle(origin, ray, v[0], v[2], v[1], xsect)) // test triangle in both windings because intersectLineTriangle is winding dependent
+                    hits++;
+            }
         }
 
         if(hits%2 == 0) // even number of intersection means point is outside
