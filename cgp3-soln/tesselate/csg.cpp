@@ -541,16 +541,16 @@ void Scene::freddyScene(){
 
     //palm
     ShapeNode * handSph_r = new ShapeNode();
-    handSph_r->shape = new Sphere(cgp::Point(1.2f, -0.7f, 1.0f), 1.5f);
+    handSph_r->shape = new Sphere(cgp::Point(1.8f, -0.7f, 1.0f), 1.5f);
     //finger1
     ShapeNode * handCyl1_r = new ShapeNode();
-    handCyl1_r->shape = new Cylinder(cgp::Point(1.4f, -0.8f, 2.5f), cgp::Point(3.1f, -0.4f, 1.9f), 0.25f);
+    handCyl1_r->shape = new Cylinder(cgp::Point(0.0f, -0.8f, 0.0f), cgp::Point(0.0f, -0.4f, 0.0f), 0.25f);
     //finger1
     ShapeNode * handCyl2_r = new ShapeNode();
-    handCyl2_r->shape = new Cylinder(cgp::Point(1.0f, -1.2f, 2.5f), cgp::Point(2.7f, -0.8f, 1.9f), 0.25f);
+    handCyl2_r->shape = new Cylinder(cgp::Point(1.2f, -1.2f, 2.5f), cgp::Point(2.7f, -0.8f, 1.9f), 0.25f);
     //finger1
     ShapeNode * handCyl3_r = new ShapeNode();
-    handCyl3_r->shape = new Cylinder(cgp::Point(0.8f, -1.6f, 2.5f), cgp::Point(2.5f, -1.2f, 1.9f), 0.25f);
+    handCyl3_r->shape = new Cylinder(cgp::Point(0.75f, -1.6f, 2.5f), cgp::Point(2.5f, -1.2f, 1.9f), 0.25f);
 
 
     OpNode * hand_right_1 = new OpNode();
