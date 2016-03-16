@@ -406,22 +406,22 @@ void Scene::freddyScene(){
     //LEFT FOOT//
     //3 speheres and 3 cylinders
     ShapeNode * footSph1_l = new ShapeNode();
-    footSph1_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    footSph1_l->shape = new Sphere(cgp::Point(1.8f, -2.4f, 2.9f), 0.3f);
 
     ShapeNode * footSph2_l = new ShapeNode();
-    footSph2_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    footSph2_l->shape = new Sphere(cgp::Point(1.2f, -2.4, 3.0f), 0.3f);
 
     ShapeNode * footSph3_l = new ShapeNode();
-    footSph3_l->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    footSph3_l->shape = new Sphere(cgp::Point(0.6f, -2.4f, 3.1f), 0.3f);
 
     ShapeNode * footCyl1_l = new ShapeNode();
-    footCyl1_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    footCyl1_l->shape = new Cylinder(cgp::Point(1.2f, -2.1f, 2.1f), cgp::Point(1.8f, -2.4f, 2.9f), 0.3f);
 
     ShapeNode * footCyl2_l = new ShapeNode();
-    footCyl2_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    footCyl2_l->shape = new Cylinder(cgp::Point(0.8f, -2.1f, 2.2f), cgp::Point(1.2f, -2.4f, 3.0f), 0.3f);
 
     ShapeNode * footCyl3_l = new ShapeNode();
-    footCyl3_l->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    footCyl3_l->shape = new Cylinder(cgp::Point(0.4f, -2.1f, 2.3f), cgp::Point(0.6f, -2.4f, 3.1f), 0.3f);
 
 
     OpNode * foot_left_4 = new OpNode();
@@ -453,22 +453,22 @@ void Scene::freddyScene(){
     //RIGHT FOOT//
     //3 speheres and 3 cylinders
     ShapeNode * footSph1_r = new ShapeNode();
-    footSph1_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    footSph1_r->shape = new Sphere(cgp::Point(-1.8f, -2.4f, 2.9f), 0.3f);
 
     ShapeNode * footSph2_r = new ShapeNode();
-    footSph2_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    footSph2_r->shape = new Sphere(cgp::Point(-1.2f, -2.4f, 3.0f), 0.3f);
 
     ShapeNode * footSph3_r = new ShapeNode();
-    footSph3_r->shape = new Sphere(cgp::Point(1.0f, -2.0f, -2.0f), 3.0f);
+    footSph3_r->shape = new Sphere(cgp::Point(-0.6f, -2.4f, 3.1f), 0.3f);
 
     ShapeNode * footCyl1_r = new ShapeNode();
-    footCyl1_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    footCyl1_r->shape = new Cylinder(cgp::Point(-1.2f, -2.1f, 2.1f), cgp::Point(-1.8f, -2.4f, 2.9f), 0.3f);
 
     ShapeNode * footCyl2_r = new ShapeNode();
-    footCyl2_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    footCyl2_r->shape = new Cylinder(cgp::Point(-0.8f, -2.1f, 2.2f), cgp::Point(-1.2f, -2.4f, 3.0f), 0.3f);
 
     ShapeNode * footCyl3_r = new ShapeNode();
-    footCyl3_r->shape = new Cylinder(cgp::Point(-7.0f, -7.0f, 0.0f), cgp::Point(7.0f, 7.0f, 0.0f), 2.0f);
+    footCyl3_r->shape = new Cylinder(cgp::Point(-0.4f, -2.1f, 2.3f), cgp::Point(-0.6f, -2.4f, 3.1f), 0.3f);
 
 
     OpNode * foot_right_4 = new OpNode();
@@ -498,6 +498,9 @@ void Scene::freddyScene(){
     foot_right->op = SetOp::UNION;
     foot_right->left = foot_right_1;
     foot_right->right = foot_right_2;
+
+    /*foot_right->left = footSph1_r;
+    foot_right->right = footCyl1_r;*/
 
 
     //LEFT HAND//
@@ -691,7 +694,7 @@ void Scene::freddyScene(){
     bodies->op = SetOp::UNION;
     bodies->left = head_nose;
     bodies->right = tail_body;
-    /*bodies->left = hands;
+    /*bodies->left = foot_right;
     bodies->right = tail_body;*/
 
     OpNode * limbs = new OpNode();
@@ -701,10 +704,10 @@ void Scene::freddyScene(){
 
     OpNode * top = new OpNode();
     top->op = SetOp::UNION;
-    /*top->left = bodies;
-    top->right = limbs;*/
     top->left = bodies;
-    top->right = hands;
+    top->right = limbs;
+  /*  top->left = bodies;
+    top->right = hands;*/
 
 
     //bottom cutter
