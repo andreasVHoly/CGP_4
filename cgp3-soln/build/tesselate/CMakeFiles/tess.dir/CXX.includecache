@@ -40,6 +40,24 @@ common/debug_string.h
 debug_string.h
 ../common/debug_string.h
 
+../khronos_headers/GL/gl3.h
+windows.h
+-
+stddef.h
+-
+inttypes.h
+-
+inttypes.h
+-
+inttypes.h
+-
+stdint.h
+-
+stdint.h
+-
+inttypes.h
+-
+
 ../khronos_headers/GLES2/gl2.h
 GLES2/gl2platform.h
 -
@@ -127,9 +145,9 @@ renderer.h
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/renderer.h
 
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/glheaders.h
-OpenGL/gl3.h
+GL/gl3.h
 -
-OpenGL/glu.h
+GL/glu.h
 -
 QDebug
 -
@@ -314,40 +332,12 @@ string
 common/source2cpp.h
 -
 
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/shape.cpp
-glew.h
--
-shape.h
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/shape.h
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/shape.h
 view.h
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/view.h
 
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/timer.cpp
-stdio.h
--
-stdlib.h
--
-math.h
--
-timer.h
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/timer.h
-
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/timer.h
 sys/time.h
--
-
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/vecpnt.cpp
-vecpnt.h
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/vecpnt.h
-stdio.h
--
-iostream
 -
 
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/vecpnt.h
@@ -370,28 +360,6 @@ boost/serialization/array.hpp
 boost/serialization/split_member.hpp
 -
 
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/view.cpp
-view.h
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/view.h
-stdio.h
--
-iostream
--
-fstream
--
-sstream
--
-string
--
-glm/gtc/matrix_transform.hpp
--
-glm/gtc/type_ptr.hpp
--
-cstdio
--
-cmath
--
-
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/view.h
 vecpnt.h
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/vecpnt.h
@@ -410,20 +378,6 @@ sstream
 string
 -
 glm/glm.hpp
--
-
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/voxels.cpp
-voxels.h
-/home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/voxels.h
-stdio.h
--
-math.h
--
-string.h
--
-iostream
--
-limits
 -
 
 /home/user/Honours/CGP/Ass4/cgp3-soln/tesselate/voxels.h

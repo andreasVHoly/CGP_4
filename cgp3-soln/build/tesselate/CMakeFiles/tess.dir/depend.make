@@ -5,6 +5,7 @@ tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../common/debug_string.h
 tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../common/debug_vector.h
 tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../common/source2cpp.h
+tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../khronos_headers/GLES2/gl2.h
 tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../khronos_headers/GLES2/gl2platform.h
 tesselate/CMakeFiles/tess.dir/csg.cpp.o: ../khronos_headers/KHR/khrplatform.h
@@ -148,6 +149,7 @@ tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../common/debug_string.h
 tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../common/debug_vector.h
 tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../common/source2cpp.h
+tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../khronos_headers/GLES2/gl2.h
 tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../khronos_headers/GLES2/gl2platform.h
 tesselate/CMakeFiles/tess.dir/ffd.cpp.o: ../khronos_headers/KHR/khrplatform.h
@@ -289,6 +291,7 @@ tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../common/debug_string.h
 tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../common/debug_vector.h
 tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../common/source2cpp.h
+tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../khronos_headers/GLES2/gl2.h
 tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../khronos_headers/GLES2/gl2platform.h
 tesselate/CMakeFiles/tess.dir/glwidget.cpp.o: ../khronos_headers/KHR/khrplatform.h
@@ -457,6 +460,7 @@ tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../common/debug_string.h
 tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../common/debug_vector.h
 tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../common/source2cpp.h
+tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../khronos_headers/GLES2/gl2.h
 tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../khronos_headers/GLES2/gl2platform.h
 tesselate/CMakeFiles/tess.dir/mesh.cpp.o: ../khronos_headers/KHR/khrplatform.h
@@ -599,6 +603,7 @@ tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../common/debug_string.h
 tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../common/debug_vector.h
 tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../common/source2cpp.h
+tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../khronos_headers/GLES2/gl2.h
 tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../khronos_headers/GLES2/gl2platform.h
 tesselate/CMakeFiles/tess.dir/renderer.cpp.o: ../khronos_headers/KHR/khrplatform.h
@@ -737,6 +742,7 @@ tesselate/CMakeFiles/tess.dir/renderer.cpp.o: /usr/include/qt5/QtWidgets/qwidget
 tesselate/CMakeFiles/tess.dir/shaderProgram.cpp.o: ../common/debug_string.h
 tesselate/CMakeFiles/tess.dir/shaderProgram.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/shaderProgram.cpp.o: ../common/source2cpp.h
+tesselate/CMakeFiles/tess.dir/shaderProgram.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/shaderProgram.cpp.o: ../tesselate/glheaders.h
 tesselate/CMakeFiles/tess.dir/shaderProgram.cpp.o: ../tesselate/shaderProgram.cpp
 tesselate/CMakeFiles/tess.dir/shaderProgram.cpp.o: ../tesselate/shaderProgram.h
@@ -829,6 +835,7 @@ tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../common/debug_string.h
 tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../common/debug_vector.h
 tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../common/source2cpp.h
+tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../khronos_headers/GLES2/gl2.h
 tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../khronos_headers/GLES2/gl2platform.h
 tesselate/CMakeFiles/tess.dir/tess_automoc.cpp.o: ../khronos_headers/KHR/khrplatform.h
@@ -1318,6 +1325,7 @@ tesselate/CMakeFiles/tess.dir/window.cpp.o: ../common/debug_unordered_map.h
 tesselate/CMakeFiles/tess.dir/window.cpp.o: ../common/debug_vector.h
 tesselate/CMakeFiles/tess.dir/window.cpp.o: ../common/source2cpp.h
 tesselate/CMakeFiles/tess.dir/window.cpp.o: ../common/str.h
+tesselate/CMakeFiles/tess.dir/window.cpp.o: ../khronos_headers/GL/gl3.h
 tesselate/CMakeFiles/tess.dir/window.cpp.o: ../khronos_headers/GLES2/gl2.h
 tesselate/CMakeFiles/tess.dir/window.cpp.o: ../khronos_headers/GLES2/gl2platform.h
 tesselate/CMakeFiles/tess.dir/window.cpp.o: ../khronos_headers/KHR/khrplatform.h
